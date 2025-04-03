@@ -1,8 +1,7 @@
-use anyhow::Result;
 use ratatui::{
     layout::{Constraint, Direction, Layout},
     style::{Color, Style},
-    text::{Span, Spans},
+    text::{Line, Span},
     widgets::{Block, Borders, Paragraph},
     Frame,
 };
@@ -23,17 +22,14 @@ impl Ui {
     pub fn render(&mut self, f: &mut Frame) {
         let chunks = Layout::default()
             .direction(Direction::Vertical)
-            .constraints([
-                Constraint::Min(0),
-                Constraint::Length(3),
-            ])
+            .constraints([Constraint::Min(0), Constraint::Length(3)])
             .split(f.size());
 
         // Messages area
-        let messages: Vec<Spans> = self
+        let messages: Vec<Line> = self
             .messages
             .iter()
-            .map(|m| Spans::from(vec![Span::raw(m)]))
+            .map(|m| Line::from(vec![Span::raw(m)]))
             .collect();
 
         let messages = Paragraph::new(messages)
@@ -48,9 +44,6 @@ impl Ui {
             .block(Block::default().borders(Borders::ALL).title("Input"));
 
         f.render_widget(input, chunks[1]);
-        f.set_cursor(
-            chunks[1].x + self.input.len() as u16 + 1,
-            chunks[1].y + 1,
-        );
+        f.set_cursor(chunks[1].x + self.input.len() as u16 + 1, chunks[1].y + 1);
     }
-} 
+}
