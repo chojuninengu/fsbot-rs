@@ -37,6 +37,22 @@ impl FileSystem {
         Ok(std::fs::read_to_string(path)?)
     }
 
+    pub fn create_file(&self, filename: &str) -> Result<()> {
+        let path = self.current_dir.join(filename);
+        std::fs::File::create(path)?;
+        Ok(())
+    }
+
+    pub fn delete_file(&self, filename: &str) -> Result<()> {
+        let path = self.current_dir.join(filename);
+        if path.exists() {
+            std::fs::remove_file(path)?;
+            Ok(())
+        } else {
+            Err(anyhow::anyhow!("File not found"))
+        }
+    }
+
     pub fn get_current_dir(&self) -> &PathBuf {
         &self.current_dir
     }
