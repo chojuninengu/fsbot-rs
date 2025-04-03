@@ -2,6 +2,13 @@
 name = "fsbot-rs"
 version = "0.1.0"
 edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "An AI-powered file system assistant that helps you manage and interact with your files through natural language commands"
+license = "MIT"
+repository = "https://github.com/yourusername/fsbot-rs"
+keywords = ["ai", "filesystem", "assistant", "chatbot", "file-management"]
+categories = ["filesystem", "command-line-utilities", "ai"]
+readme = "README.md"
 
 [dependencies]
 tokio = { version = "1.36", features = ["full"] }
@@ -15,3 +22,6 @@ ratatui = "0.26"
 async-trait = "0.1"
 thiserror = "1.0"
 dirs = "5.0"
+
+[dev-dependencies]
+tempfile = "3.10"
