@@ -7,7 +7,7 @@ description = "An AI-powered file system assistant that helps you manage and int
 license = "MIT"
 repository = "https://github.com/yourusername/fsbot-rs"
 keywords = ["ai", "filesystem", "assistant", "chatbot", "file-management"]
-categories = ["filesystem", "command-line-utilities", "ai"]
+categories = ["filesystem", "command-line-utilities", "development-tools"]
 readme = "README.md"
 
 [dependencies]
