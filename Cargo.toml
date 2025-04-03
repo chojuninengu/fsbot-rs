@@ -1,6 +1,17 @@
 [package]
 name = "fsbot-rs"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
+tokio = { version = "1.36", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.11", features = ["json"] }
+anyhow = "1.0"
+walkdir = "2.4"
+crossterm = "0.27"
+ratatui = "0.26"
+async-trait = "0.1"
+thiserror = "1.0"
+dirs = "5.0"
