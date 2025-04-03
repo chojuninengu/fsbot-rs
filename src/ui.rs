@@ -7,8 +7,8 @@ use ratatui::{
 };
 
 pub struct Ui {
-    input: String,
-    messages: Vec<String>,
+    pub input: String,
+    pub messages: Vec<String>,
 }
 
 impl Ui {
