@@ -1,6 +1,6 @@
 [package]
 name = "fsbot-rs"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = [" JU-NINE NGU CHO <chojuninengu@gmail.com>"]
 description = "An AI-powered file system assistant that helps you manage and interact with your files through natural language commands"
