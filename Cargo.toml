@@ -2,10 +2,10 @@
 name = "fsbot-rs"
 version = "0.1.0"
 edition = "2021"
-authors = ["Your Name <your.email@example.com>"]
+authors = [" JU-NINE NGU CHO <chojuninengu@gmail.com>"]
 description = "An AI-powered file system assistant that helps you manage and interact with your files through natural language commands"
 license = "MIT"
-repository = "https://github.com/yourusername/fsbot-rs"
+repository = "https://github.com/chojuninengu/fsbot-rs"
 keywords = ["ai", "filesystem", "assistant", "chatbot", "file-management"]
 categories = ["filesystem", "command-line-utilities", "development-tools"]
 readme = "README.md"
